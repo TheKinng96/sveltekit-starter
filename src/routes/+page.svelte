@@ -3,17 +3,18 @@
 	import { createCollapsible, melt } from '@melt-ui/svelte'
 	import { AppButton } from '$lib/components/base/button'
 	import { fade } from 'svelte/transition'
+	import { AppIcon } from '$lib/components/base/icons'
 
 	let darkMode = false
 
 	function toggleTheme() {
 		darkMode = !darkMode
-		document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
+		document.documentElement.setAttribute('data-theme', darkMode ? 'night' : 'emerald')
 	}
 
 	onMount(() => {
-		darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-		document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
+		darkMode = window.matchMedia('(prefers-color-scheme: night)').matches
+		document.documentElement.setAttribute('data-theme', darkMode ? 'night' : 'emerald')
 	})
 
 	const {
@@ -24,13 +25,11 @@
 	})
 </script>
 
-<button
-	on:click={toggleTheme}
-	type="button"
-	class="shadow-mini hover:bg-dark/95 active:scale-98 m-4 rounded bg-light-secondary-default p-2 text-light-text-default active:transition-all dark:bg-dark-secondary-default"
->
-	{darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-</button>
+<label class="swap swap-rotate">
+	<input type="checkbox" on:change={toggleTheme} checked={darkMode} />
+	<AppIcon.Sun class="swap-on fill-current size-10" />
+	<AppIcon.Moon_02 class="swap-off fill-current size-10" />
+</label>
 
 <h1 class="text-light-secondary text-2xl font-bold underline">Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
