@@ -1,12 +1,6 @@
-<script module>
-	export interface NavbarItemProps {
-		name: string
-		href: string
-		cb?: () => void
-	}
-</script>
-
 <script lang="ts">
+	import type { NavbarItemProps } from '../homepage.types'
+
 	let { name, href, cb }: NavbarItemProps = $props()
 </script>
 
