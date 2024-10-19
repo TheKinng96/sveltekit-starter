@@ -1,4 +1,18 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"landingPage_title": "ランディングページ"
+	"landingPage_title": "ランディングページ",
+	"login_title": "ログイン",
+	"login_description": "ログイン方法を選択してください",
+	"login_form_email": "メール",
+	"login_form_email_placeholder": "ラッキー@example.com",
+	"login_form_password": "パスワード",
+	"login_form_password_placeholder": "パスワード",
+	"login_continueWith": "または続けて",
+	"action_submit": "送信",
+	"action_login": "ログイン",
+	"validation_required": "この項目は必須です",
+	"validation_email": "有効なメールアドレスを入力してください",
+	"validation_minLength": "このフィールドは少なくとも{minLength}文字である必要があります",
+	"validation_password": "パスワードは8文字以上で、大文字、小文字、数字をそれぞれ1つ以上含める必要があります。",
+	"validation_password_confirm": "パスワードが一致しません"
 }

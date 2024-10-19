@@ -1,4 +1,18 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"landingPage_title": "Landing Page"
+	"landingPage_title": "Landing Page",
+	"login_title": "Login",
+	"login_description": "Please choose a method to login",
+	"login_form_email": "Email",
+	"login_form_email_placeholder": "lucky@example.com",
+	"login_form_password": "Password",
+	"login_form_password_placeholder": "Password",
+	"login_continueWith": "Or continue with",
+	"action_submit": "Submit",
+	"action_login": "Login",
+	"validation_required": "This field is required",
+	"validation_email": "Please enter a valid email address",
+	"validation_minLength": "This field must be at least {minLength} characters",
+	"validation_password": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number",
+	"validation_password_confirm": "Passwords do not match"
 }

@@ -1,7 +1,7 @@
 import type { Actions } from './$types'
 import { fail, message, superValidate, type Infer } from 'sveltekit-superforms'
 import { zod } from 'sveltekit-superforms/adapters'
-import { formSchema } from './schema'
+import { formSchema } from './login.schema'
 import type { Message } from '$lib/types/response.types'
 
 export const load = async () => {

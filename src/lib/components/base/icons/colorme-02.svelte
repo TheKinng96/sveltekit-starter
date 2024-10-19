@@ -16,7 +16,7 @@
 		/>
 	</g>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 148.64 9.97
   Q 90.60 19.29 32.63 29.23
@@ -45,7 +45,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 0.00 71.69
   L 0.00 69.19
@@ -67,7 +67,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 71.56 53.69
   Q 75.04 57.38 75.94 59.56
@@ -82,7 +82,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 122.31 56.26
   C 130.03 45.13 147.49 45.00 155.10 56.70
@@ -95,7 +95,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 96.75 81.75
   L 113.25 81.75
@@ -113,7 +113,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 169.99 49.29
   C 178.27 49.09 197.02 47.02 199.24 58.71
@@ -143,7 +143,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 228.45 62.89
   L 228.52 91.08
@@ -174,7 +174,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 279.41 65.42
   A 0.33 0.32 -90.0 0 0 279.73 65.75
@@ -204,7 +204,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 168.80 104.34
   C 171.76 102.41 175.64 105.69 172.57 108.61
@@ -231,7 +231,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 7.51 109.50
   L 3.62 109.50
@@ -267,7 +267,7 @@
   Z"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-5.82"
 		y="-1.49"
 		transform="translate(31.17,105.51) rotate(-0.2)"
@@ -276,7 +276,7 @@
 		rx="0.73"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-3.20"
 		y="-1.45"
 		transform="translate(108.33,106.29) rotate(11.1)"
@@ -285,7 +285,7 @@
 		rx="0.65"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-5.75"
 		y="-1.45"
 		transform="translate(71.88,106.62) rotate(10.7)"
@@ -425,7 +425,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 116.69 109.69
   Q 117.48 108.27 119.31 109.22
@@ -438,7 +438,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 131.05 115.75
   L 125.74 115.74
@@ -466,7 +466,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 139.70 109.11
   C 141.79 107.90 142.17 111.58 141.87 112.78
@@ -478,7 +478,7 @@
   Z"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-1.22"
 		y="-2.12"
 		transform="translate(144.60,111.14) rotate(-4.6)"
@@ -487,7 +487,7 @@
 		rx="0.43"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 142.75 119.30
   L 142.75 118.62
@@ -536,7 +536,7 @@
 		rx="0.38"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 38.55 109.82
   C 38.32 115.32 33.19 120.12 27.75 120.21
@@ -554,7 +554,7 @@
   Z"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-3.05"
 		y="-1.45"
 		transform="translate(107.50,111.32) rotate(9.9)"
@@ -584,7 +584,7 @@
   Z"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-4.96"
 		y="-1.30"
 		transform="translate(71.86,112.20) rotate(10.6)"
@@ -592,9 +592,9 @@
 		height="2.60"
 		rx="0.62"
 	/>
-	<rect fill="#000000" x="44.01" y="110.25" width="14.98" height="3.00" rx="0.68" />
+	<rect fill="currentColor" x="44.01" y="110.25" width="14.98" height="3.00" rx="0.68" />
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-7.53"
 		y="-1.51"
 		transform="translate(90.97,111.76) rotate(0.1)"
@@ -647,7 +647,7 @@
 		rx="0.68"
 	/>
 	<rect
-		fill="#000000"
+		fill="currentColor"
 		x="-6.51"
 		y="-1.47"
 		transform="translate(71.63,117.57) rotate(10.7)"

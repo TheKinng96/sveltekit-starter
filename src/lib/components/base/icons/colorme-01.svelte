@@ -1,6 +1,6 @@
 <svg {...$$restProps} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 300 100">
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 148.64 9.97
   Q 90.60 19.29 32.63 29.23
@@ -29,7 +29,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 0.00 71.69
   L 0.00 69.19
@@ -51,7 +51,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 71.56 53.69
   Q 75.04 57.38 75.94 59.56
@@ -66,7 +66,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 122.31 56.26
   C 130.03 45.13 147.49 45.00 155.10 56.70
@@ -79,7 +79,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 96.75 81.75
   L 113.25 81.75
@@ -97,7 +97,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 169.99 49.29
   C 178.27 49.09 197.02 47.02 199.24 58.71
@@ -127,7 +127,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 228.45 62.89
   L 228.52 91.08
@@ -158,7 +158,7 @@
   Z"
 	/>
 	<path
-		fill="#000000"
+		fill="currentColor"
 		d="
   M 279.41 65.42
   A 0.33 0.32 -90.0 0 0 279.73 65.75

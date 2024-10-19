@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { formSchema } from './schema'
+	import * as m from '$lib/paraglide/messages.js'
+	import { formSchema } from './login.schema'
 	import { superForm } from 'sveltekit-superforms'
 	import { zodClient } from 'sveltekit-superforms/adapters'
 	import { goto } from '$app/navigation'
 	import { AppIcon } from '$lib/components/base/icons'
+	import { AppTextInput, AppPasswordInput } from '$lib/components/base/form/'
 
 	let { data } = $props()
 
@@ -11,7 +13,7 @@
 		validators: zodClient(formSchema),
 	})
 
-	const { form: formData, enhance, message } = form
+	const { form: formData, enhance, message, constraints, errors } = form
 
 	$effect(() => {
 		if ($message?.status) {
@@ -29,31 +31,38 @@
 	})
 </script>
 
-<div class="flex flex-col space-y-2 text-center">
-	<h1 class="text-2xl font-semibold tracking-tight">m.auth_login_formTitle()</h1>
-	<p class="text-muted-foreground text-sm">m.auth_login_formDescription()</p>
+<div class="mb-4 flex flex-col gap-2">
+	<h1 class="text-2xl font-bold tracking-tight">{m.login_title()}</h1>
+	<p class="text-muted-foreground text-sm">{m.login_description()}</p>
 </div>
 
-<div>
+<div class="flex flex-col gap-4">
 	<form method="POST" use:enhance>
-		<label for="name">Name</label>
-		<input type="text" name="name" bind:value={$formData.password} />
+		<AppTextInput
+			name="email"
+			type="text"
+			bind:value={$formData.email}
+			constraints={$constraints.email}
+			errors={$errors.email}
+			placeholder={m.login_form_email_placeholder()}
+		/>
 
-		<label for="email">E-mail</label>
-		<input type="email" name="email" bind:value={$formData.email} />
+		<AppPasswordInput
+			name="password"
+			type="password"
+			bind:value={$formData.password}
+			constraints={$constraints.password}
+			errors={$errors.password}
+			placeholder={m.login_form_password_placeholder()}
+		/>
+
+		<button class="btn btn-primary btn-sm w-full">{m.action_login()}</button>
 	</form>
 
-	<div class="relative">
-		<div class="absolute inset-0 flex items-center">
-			<span class="w-full border-t"></span>
-		</div>
-		<div class="relative flex justify-center text-xs uppercase">
-			<span class="bg-background text-muted-foreground px-2"> Or continue with </span>
-		</div>
-	</div>
+	<div class="divider">{m.login_continueWith()}</div>
 
-	<a href={data.colormeUrl} class="btn btn-outline btn-neutral flex gap-2">
-		<AppIcon.Colorme_01 class="h-full scale-90 " />
+	<a href={data.colormeUrl} class="group btn btn-outline btn-neutral btn-sm flex gap-2">
+		<AppIcon.Colorme_01 class="h-full w-14 scale-90 group-hover:stroke-white" />
 		ColorMe
 	</a>
 </div>

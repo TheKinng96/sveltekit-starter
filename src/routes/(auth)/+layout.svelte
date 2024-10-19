@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<div class="lg:p-8">
+	<div class="m-auto w-full max-w-md lg:p-8">
 		{@render children()}
 	</div>
 </div>
