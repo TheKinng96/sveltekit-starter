@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NavbarItemProps } from '../homepage.types'
+	import type { NavbarItemProps } from '../landingPage.types'
 
 	let { name, href, cb }: NavbarItemProps = $props()
 </script>

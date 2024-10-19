@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { AppIcon } from '$lib/components/base/icons'
 	import { AppThemeSwitcher } from '$lib/components/base/themeSwitcher'
-	import type { NavbarItemProps } from '../homepage.types'
+	import type { NavbarItemProps } from '../landingPage.types'
 	import NavbarItem from './NavbarItem.svelte'
 
 	const navItems: NavbarItemProps[] = [
