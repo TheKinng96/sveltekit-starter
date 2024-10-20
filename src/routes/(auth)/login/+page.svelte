@@ -31,6 +31,10 @@
 	})
 </script>
 
+<svelte:head>
+	<title>{m.login_title()}</title>
+</svelte:head>
+
 <div class="mb-4 flex flex-col gap-2">
 	<h1 class="text-2xl font-bold tracking-tight">{m.login_title()}</h1>
 	<p class="text-muted-foreground text-sm">{m.login_description()}</p>
@@ -49,7 +53,6 @@
 
 		<AppPasswordInput
 			name="password"
-			type="password"
 			bind:value={$formData.password}
 			constraints={$constraints.password}
 			errors={$errors.password}

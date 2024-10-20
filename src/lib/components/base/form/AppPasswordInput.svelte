@@ -11,7 +11,7 @@
 		errors,
 		constraints,
 		class: extraClass,
-	}: InputProps = $props()
+	}: Omit<InputProps, 'type'> = $props()
 
 	let passwordVisible = $state(false)
 </script>

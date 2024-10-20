@@ -8,11 +8,16 @@
 	"login_form_password": "Password",
 	"login_form_password_placeholder": "Password",
 	"login_continueWith": "Or continue with",
+	"register_title": "Create an account",
+	"register_metaTitle": "Registration",
+	"register_form_passwordConfirmation_placeholder": "Password confirmation",
+	"register_description": "Please continue with Colorme account",
 	"action_submit": "Submit",
 	"action_login": "Login",
+	"action_register": "Register",
 	"validation_required": "This field is required",
 	"validation_email": "Please enter a valid email address",
 	"validation_minLength": "This field must be at least {minLength} characters",
 	"validation_password": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number",
-	"validation_password_confirm": "Passwords do not match"
+	"validation_passwordConfirm": "Passwords do not match"
 }

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages.js'
 	import { page } from '$app/stores'
 	import { setLanguageTag } from '$lib/paraglide/runtime'
 
@@ -11,10 +12,12 @@
 >
 	{#if $page.route.id?.includes('login')}
 		<a href="/register" class="btn btn-outline absolute right-4 top-4 md:right-8 md:top-8">
-			Register
+			{m.action_register()}
 		</a>
 	{:else}
-		<a href="/login" class="btn btn-outline absolute right-4 top-4 md:right-8 md:top-8"> Login </a>
+		<a href="/login" class="btn btn-outline absolute right-4 top-4 md:right-8 md:top-8">
+			{m.action_login()}
+		</a>
 	{/if}
 
 	<div class="bg-muted relative hidden h-full flex-col p-10 dark:border-r md:flex">
