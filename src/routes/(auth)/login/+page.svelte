@@ -10,7 +10,7 @@
 	let { data } = $props()
 
 	const form = superForm(data.form, {
-		validators: zodClient(formSchema),
+		validators: zodClient(formSchema()),
 	})
 
 	const { form: formData, enhance, message, constraints, errors } = form

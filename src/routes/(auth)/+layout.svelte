@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import { setLanguageTag } from '$lib/paraglide/runtime'
 
 	let { children } = $props()
+	setLanguageTag('ja')
 </script>
 
 <div
