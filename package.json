@@ -42,6 +42,7 @@
   },
   "type": "module",
   "dependencies": {
-    "daisyui": "^4.12.13"
+    "daisyui": "^4.12.13",
+    "@inlang/paraglide-sveltekit": "0.11.3"
   }
 }
