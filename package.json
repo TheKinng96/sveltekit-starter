@@ -44,6 +44,7 @@
   "dependencies": {
     "@inlang/paraglide-sveltekit": "0.11.3",
     "daisyui": "^4.12.13",
-    "svelte-sonner": "^0.3.28"
+    "svelte-sonner": "^0.3.28",
+    "zod-key-parser": "^1.5.5"
   }
 }

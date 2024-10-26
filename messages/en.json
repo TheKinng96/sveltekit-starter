@@ -12,6 +12,7 @@
 	"register_metaTitle": "Registration",
 	"register_form_passwordConfirmation_placeholder": "Password confirmation",
 	"register_description": "Please continue with Colorme account",
+	"register_error_invalidEmail": "The email is invalid or already in use",
 	"action_submit": "Submit",
 	"action_login": "Login",
 	"action_register": "Register",

@@ -1,6 +1,8 @@
 import { z } from 'zod'
 import * as m from '$lib/paraglide/messages.js'
 import { type AvailableLanguageTag } from '$lib/paraglide/runtime'
+import { parseZodSchema } from 'zod-key-parser'
+import type { ErrorDetail } from '$lib/types/response.types'
 
 // Bug that on hard refresh, the locale will be set to the default no matter when we call the set language fn
 export const formSchema = (locale: AvailableLanguageTag = 'ja') =>
@@ -26,3 +28,11 @@ export const formSchema = (locale: AvailableLanguageTag = 'ja') =>
 		})
 
 export type FormSchema = typeof formSchema
+
+export type RegisterFormSchema = typeof formSchema
+// eslint-disable-next-line
+const { keys } = parseZodSchema(formSchema())
+export type RegisterFormError = {
+	[K in keyof typeof keys]: ErrorDetail
+}
+export type RegisterErrorKeys = 'validation_invalid_email' | undefined

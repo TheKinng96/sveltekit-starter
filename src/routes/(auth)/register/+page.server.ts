@@ -1,8 +1,8 @@
 import type { Actions } from './$types'
 import { fail, message, superValidate, type Infer } from 'sveltekit-superforms'
 import { zod } from 'sveltekit-superforms/adapters'
-import { formSchema } from './register.schema'
-import type { Message } from '$lib/types/response.types'
+import { formSchema, type RegisterErrorKeys, type RegisterFormError } from './register.schema'
+import type { ErrorResponse, Message } from '$lib/types/response.types'
 import { languageTag } from '$lib/paraglide/runtime'
 import type { AuthSystemFields } from '$lib/types/pocketbase-types'
 import * as m from '$lib/paraglide/messages.js'
@@ -28,10 +28,34 @@ export const actions = {
 
 		const { email, password, passwordConfirm } = form.data
 
-		const user = await locals.pb
-			.collection<AuthSystemFields>('users')
-			.create({ email, password, passwordConfirm })
-		locals.user = user
+		try {
+			const user = await locals.pb.collection<AuthSystemFields>('users').create({
+				email,
+				password,
+				passwordConfirm,
+			})
+
+			locals.user = user
+		} catch (error) {
+			const err = error as {
+				response: ErrorResponse<RegisterFormError>
+			}
+
+			const errorCode = err.response.data?.email?.code as RegisterErrorKeys
+
+			// To parse the error message from pocketbase to locales
+			const errors = {
+				validation_invalid_email: m.register_error_invalidEmail(),
+			} as Record<NonNullable<RegisterErrorKeys>, string>
+
+			return message(form, {
+				text: {
+					title: err.response.message,
+					description: errorCode ? errors[errorCode] : undefined,
+				},
+				status: 'error',
+			})
+		}
 
 		return message(form, {
 			status: 'success',
