@@ -6,6 +6,7 @@
 	import { goto } from '$app/navigation'
 	import { AppIcon } from '$lib/components/base/icons'
 	import { AppTextInput, AppPasswordInput } from '$lib/components/base/form/'
+	import { toast } from 'svelte-sonner'
 
 	let { data } = $props()
 
@@ -16,17 +17,15 @@
 	const { form: formData, enhance, message, constraints, errors } = form
 
 	$effect(() => {
-		if ($message?.status) {
-			if ($message.status !== 'success' && $message.text) {
-				// show toast
-				// toast.error($message.text.title, {
-				// 	description: $message.text.description,
-				// })
-			}
+		if (!$message?.status || !$message.text) return
 
-			if ($message.status === 'success') {
-				goto('/dashboard')
-			}
+		const { title, description } = $message.text
+
+		if ($message.status === 'success') {
+			toast.success(title, { description })
+			goto('/dashboard')
+		} else {
+			toast.error(title, { description })
 		}
 	})
 </script>

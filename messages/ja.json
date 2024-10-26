@@ -15,10 +15,11 @@
 	"action_submit": "送信",
 	"action_login": "ログイン",
 	"action_register": "登録する",
+	"toast_success_register": "登録が完了しました",
+	"toast_success_login": "ログインに成功しました",
 	"validation_required": "この項目は必須です",
 	"validation_email": "有効なメールアドレスを入力してください",
 	"validation_minLength": "このフィールドは少なくとも{minLength}文字である必要があります",
 	"validation_password": "パスワードは8文字以上で、大文字、小文字、数字をそれぞれ1つ以上含める必要があります。",
-	"validation_passwordConfirm": "パスワードが一致しません",
-	"validation_password_confirm": "パスワードが一致しません"
+	"validation_passwordConfirm": "パスワードが一致しません"
 }

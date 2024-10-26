@@ -5,6 +5,7 @@
 	import { superForm } from 'sveltekit-superforms'
 	import { zodClient } from 'sveltekit-superforms/adapters'
 	import { formSchema } from './register.schema.js'
+	import { toast } from 'svelte-sonner'
 
 	let { data } = $props()
 
@@ -12,7 +13,13 @@
 		validators: zodClient(formSchema()),
 	})
 
-	const { form: formData, enhance, constraints, errors } = form
+	const { form: formData, enhance, constraints, errors, message } = form
+
+	$effect(() => {
+		if ($message?.status === 'success' && $message.text) {
+			toast.success($message.text.title)
+		}
+	})
 </script>
 
 <svelte:head>
@@ -46,7 +53,7 @@
 			/>
 
 			<AppPasswordInput
-				name="passwordConfirmation"
+				name="passwordConfirm"
 				bind:value={$formData.passwordConfirm}
 				constraints={$constraints.passwordConfirm}
 				errors={$errors.passwordConfirm}

@@ -4,6 +4,7 @@ import { zod } from 'sveltekit-superforms/adapters'
 import { formSchema } from './login.schema'
 import type { Message } from '$lib/types/response.types'
 import { languageTag } from '$lib/paraglide/runtime'
+import * as m from '$lib/paraglide/messages.js'
 
 const schema = formSchema(languageTag())
 
@@ -17,19 +18,34 @@ export const load = async () => {
 }
 
 export const actions = {
-	default: async ({ request }) => {
+	default: async ({ request, locals }) => {
 		const form = await superValidate(request, zod(schema))
 
 		if (!form.valid) {
 			return fail(400, { form })
 		}
 
-		// const { email, password } = form.data
+		const { email, password } = form.data
 
-		// Do something with the email and password
+		try {
+			await locals.pb.collection('users').authWithPassword(email, password)
+		} catch (error) {
+			console.error('login', error)
+
+			return message(form, {
+				text: {
+					title: m.toast_error_login(),
+					description: m.toast_error_loginDescription(),
+				},
+				status: 'error',
+			})
+		}
 
 		return message(form, {
 			status: 'success',
+			text: {
+				title: m.toast_success_login(),
+			},
 		})
 	},
 } satisfies Actions

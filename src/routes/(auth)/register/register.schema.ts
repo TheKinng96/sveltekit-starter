@@ -19,7 +19,7 @@ export const formSchema = (locale: AvailableLanguageTag = 'ja') =>
 			if (passwordConfirm !== password) {
 				ctx.addIssue({
 					code: 'custom',
-					message: 'The passwords did not match',
+					message: m.validation_passwordConfirm(),
 					path: ['passwordConfirm'],
 				})
 			}

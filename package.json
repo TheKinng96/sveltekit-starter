@@ -42,7 +42,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@inlang/paraglide-sveltekit": "0.11.3",
     "daisyui": "^4.12.13",
-    "@inlang/paraglide-sveltekit": "0.11.3"
+    "svelte-sonner": "^0.3.28"
   }
 }

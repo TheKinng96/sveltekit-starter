@@ -20,7 +20,9 @@
 		</a>
 	{/if}
 
-	<div class="bg-muted relative hidden h-full flex-col p-10 dark:border-r md:flex">
+	<div
+		class="bg-muted pointer-events-none relative hidden h-full flex-col p-10 dark:border-r md:flex"
+	>
 		<div class="absolute inset-0 h-full w-full bg-black">
 			<img
 				src="/images/auth/auth-abstract.svg"

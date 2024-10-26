@@ -5,7 +5,7 @@ import type { Handle } from '@sveltejs/kit'
 import type { AuthSystemFields, TypedPocketBase } from '$lib/types/pocketbase-types'
 
 const handlePocketbase: Handle = async ({ event, resolve }) => {
-	event.locals.pb = new Pocketbase('http://pocketbase:8090') as TypedPocketBase
+	event.locals.pb = new Pocketbase('http://localhost:8090') as TypedPocketBase
 
 	event.locals.pb.autoCancellation(false)
 
