@@ -1,38 +1,63 @@
-# create-svelte
+# Colorme App Starter Kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a starter kit for Colorme app development, aimed at separating frontend and backend services. Unlike [previous versions](https://github.com/TheKinng96/sveltekit-pocketbase-starter) that bundled everything in a single Docker container, this setup optimizes deployment flexibility and allows for cost-effective hosting solutions.
 
-## Creating a project
+## Hosting Strategy
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Backend**: Using [Pockethost](https://pockethost.io/) for free hosting and monitoring of PocketBase instances, ideal for proof-of-concept (PoC) development without upfront costs. Production projects can eventually migrate to dedicated servers closer to the service area for performance optimization.
+- **Frontend**: The frontend can be hosted on any SvelteKit-supported platform like [AWS Amplify](https://aws.amazon.com/amplify/), [Vercel](https://vercel.com/), or [Heroku](https://www.heroku.com/). These platforms provide robust integrations with SvelteKit, making deployment straightforward and efficient.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Project Structure
 
-# create a new project in my-app
-npm create svelte@latest my-app
+```plaintext
+.
+├── src
+│   ├── lib
+│   │   ├── api
+│   │   ├── auth
+│   │   ├── components
+│   │   ├── paraglide
+│   │   │   └── messages
+│   │   ├── server
+│   │   ├── stores
+│   │   └── types
+│   └── routes
+│       ├── (actions)
+│       │   └── logout
+│       ├── (app)
+│       │   └── dashboard
+│       ├── (auth)
+│       │   ├── (ui)
+│       │   │   ├── login
+│       │   │   └── register
+│       │   └── callback
+│       │       └── colorme
+│       ├── (guest)
+│       │   ├── (components)
+│       │   ├── privacy
+│       │   └── terms
+│       └── api
+│           └── colorme
+│               ├── install
+│               └── uninstall
+└── static
+    └── images
+        └── auth
 ```
 
-## Developing
+## Stack
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This starter kit includes the following technologies:
 
-```bash
-npm run dev
+- [Svelte 5](https://svelte.dev/): The latest version of Svelte, providing optimized reactivity and developer experience.
+- [Superform](https://superforms.dev/) + [zod](https://zod.dev/): For form validation and schema handling, ensuring robust data handling.
+- [Daisy UI](https://daisyui.com/): A UI component library based on TailwindCSS, making it easy to build consistent, responsive layouts.
+- [Melt UI](https://melt-ui.com/): Additional UI components to enhance interactivity and design.
+- [PocketBase](https://pocketbase.io/): An open-source backend solution with built-in authentication, file storage, and real-time updates.
+- [Inlang Paraglide](https://inlang.com/m/gerre34r/library-inlang-paraglideJs): i18n alternative with awesome key listing and machine translation support.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Backend
 
-## Building
+[Pocketbase part](https://github.com/TheKinng96/pocketbase-sveltekit-starter) is available here with a custom login function defined in the hook file.
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Happy building with the Colorme Starter Kit!
