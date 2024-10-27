@@ -86,11 +86,11 @@ export class ColormeAuthenticatedRequest extends ColormeRequest {
 				shopLogoUrl: '',
 			}
 
-		const { id, name1, user_mail, shop_mail_1, url, shop_logo_url } = shop
+		const { id, name1, name2, user_mail, shop_mail_1, url, shop_logo_url } = shop
 
 		return {
 			id,
-			name: name1,
+			name: name1.length > 0 ? name1 : name2.length > 0 ? name2 : user_mail.split('@')[0],
 			email: user_mail,
 			shopMail: shop_mail_1,
 			url,
