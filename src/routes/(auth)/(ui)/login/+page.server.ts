@@ -5,6 +5,8 @@ import { formSchema } from './login.schema'
 import type { Message } from '$lib/types/response.types'
 import { languageTag } from '$lib/paraglide/runtime'
 import * as m from '$lib/paraglide/messages.js'
+import { ColormeTokenRequest } from '$lib/server/Colorme.api'
+import { COLORME_CLIENT, COLORME_REDIRECT_URL } from '$env/static/private'
 
 const schema = formSchema(languageTag())
 
@@ -13,7 +15,7 @@ export const load = async () => {
 
 	return {
 		form,
-		colormeUrl: '#',
+		colormeUrl: await new ColormeTokenRequest(COLORME_CLIENT, COLORME_REDIRECT_URL).getAuthUrl(),
 	}
 }
 
