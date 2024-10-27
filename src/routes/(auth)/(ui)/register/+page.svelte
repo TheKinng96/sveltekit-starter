@@ -1,25 +1,25 @@
 <script lang="ts">
-	import { AppPasswordInput, AppTextInput } from '$lib/components/base/form'
+	// import { AppPasswordInput, AppTextInput } from '$lib/components/base/form'
 	import { AppIcon } from '$lib/components/base/icons'
 	import * as m from '$lib/paraglide/messages.js'
-	import { superForm } from 'sveltekit-superforms'
-	import { zodClient } from 'sveltekit-superforms/adapters'
-	import { formSchema } from './register.schema.js'
-	import { toast } from 'svelte-sonner'
+	// import { superForm } from 'sveltekit-superforms'
+	// import { zodClient } from 'sveltekit-superforms/adapters'
+	// import { formSchema } from './register.schema.js'
+	// import { toast } from 'svelte-sonner'
 
 	let { data } = $props()
 
-	const form = superForm(data.form, {
-		validators: zodClient(formSchema()),
-	})
+	// const form = superForm(data.form, {
+	// 	validators: zodClient(formSchema()),
+	// })
 
-	const { form: formData, enhance, constraints, errors, message } = form
+	// const { form: formData, enhance, constraints, errors, message } = form
 
-	$effect(() => {
-		if ($message?.status === 'success' && $message.text) {
-			toast.success($message.text.title)
-		}
-	})
+	// $effect(() => {
+	// 	if ($message?.status === 'success' && $message.text) {
+	// 		toast.success($message.text.title)
+	// 	}
+	// })
 </script>
 
 <svelte:head>
@@ -33,8 +33,8 @@
 	</div>
 
 	<div class="mb-4 flex flex-col gap-4">
-		<!-- can only do colorme now -->
-		<form method="POST" use:enhance>
+		<!-- By default can only login by Colorme -->
+		<!-- <form method="POST" use:enhance>
 			<AppTextInput
 				name="email"
 				type="text"
@@ -61,9 +61,9 @@
 			/>
 
 			<button class="btn btn-primary btn-sm w-full">{m.action_login()}</button>
-		</form>
+		</form> -->
 
-		<div class="divider">{m.login_continueWith()}</div>
+		<!-- <div class="divider">{m.login_continueWith()}</div> -->
 
 		<a href={data.colormeUrl} class="group btn btn-outline btn-neutral btn-sm flex gap-2">
 			<AppIcon.Colorme_01 class="h-full w-14 scale-90 group-hover:stroke-white" />
